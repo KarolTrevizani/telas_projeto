@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoControl</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+
+#image-auto-control {
+    width: 100%;
+    height: 40%;
+}
+
+.card{
+    width: 10rem;
+    height: 15.4rem;
+}
+
+i {
+    color: gray;
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+}
+
+.footer{
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+}
+
+.group_cards {
+    margin: 70px;
+}
+
+a {
+    text-decoration:none;
+    color: orange;
+    display: flex;
+    justify-content: center;
+}
+
+</style>
+<body>
+    <!-- Header -->
+    <nav class="navbar" style="background-color: #12111f;">
+        <div class="container-fluid">
+        <a class="navbar-brand"><b>AutoControl</b></a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a rel="stylesheet" href="login.html">Login</a>
+            </li>
+        </ul>
+        <form class="d-flex">
+        <i class="fas fa-user-alt" style="color: orange;"></i> &nbsp;
+        <small style="color: white;">Dóris Reck</small>
+        </form>
+    </div>
+    </nav>
+    <!-- End Header -->
+
+    <!-- Image Principal AutoControl -->
+    <img id="image-auto-control" src="static/logo_auto.jpeg" alt="">
+    <!--  End Image Principal AutoControl -->
+    <br><br>
+    <div class="container">
+        <!-- Cards página principal -->
+        <div class="group_cards" style="display: flex; justify-content: space-evenly;">
+            <div class="card">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <img h src="static/logo-carro.jpeg" alt="">
+                    <a href="register_new_vehicle.html">Ver Mais</a>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <img src="static/logo-gastos.jpeg" alt="">
+                    <a href="#">Ver Mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <img src="static/logo-calendar.jpeg" alt="">
+                    <a href="#">Ver Mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <img src="static/logo-perfil.jpeg" alt="">
+                    <a href="#">Ver Mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <img src="static/logo-settings.jpeg" alt="">
+                    <a href="#">Ver Mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <img src="static/logo-talk.jpeg" alt="">
+                    <a href="#">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+        <!-- Ends Cards página principal -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-text">
+                <p>Siga a AutoControl nas redes sociais</p>
+            </div>
+            <div class="logos" id="text-login">
+                <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram-square"></i></a>
+                &nbsp;&nbsp;
+                <a href="https://pt-br.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footer-text">
+                <a href="about_us.html">About us</a>
+            </div>
+        </div>
+        <!-- End Footer -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoControl</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<style>
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.container{
+    display: flex;
+    justify-content:space-around;
+}
+
+#text-login {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 70%;
+    margin-left: 15%;
+    background-color: #12111f;
+    color: white;
+    height: 40px;
+}
+
+.options {
+    color: orange;
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    color: gray;
+}
+
+.footer{
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+}
+
+a {
+text-decoration:none;
+color: orange;
+}
+
+.rounded{
+    width: 50%;
+    height: 15%;
+    margin-top: 7%;
+}
+
+form {
+    width: 100%;
+}
+
+.buttons{
+    border: solid orange;
+    padding: 5px; 
+    border-radius: 5px;
+    background-color: #ffa500;
+}
+
+#see-vehicles{
+    color: #12111f;
+}
+
+</style>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar" style="background-color: #12111f;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="base.html"><b>AutoControl</b></a>
+            <a href="login.html" class="d-flex"><i class="fas fa-user-alt" style="color: orange;"></i></a>
+        </div>
+    </nav>
+    <!-- End Header -->
+    <br>
+    <div class="container-fluid">
+        <div class="options">
+            <a rel="stylesheet" href="base.html">Voltar</a>
+            <p><a href="login.html">Login |</a><a href="register.html"> Cadastro</a></p>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: end; width: 92%;">
+        <div class="buttons">
+            <a href="all_vehicles.html" id="see-vehicles">Meus Veículos <i class="fas fa-eye" style="color: #12111f;"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="register-vehicle">
+            <br>
+            <form action="" method="post">
+                <h2 style="font-weight: 700;" >Cadastrar Novo Veículo</h2>
+                <br>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="type">Tipo de Veículo</label>
+                        <select name="type" id="type" class="form-control">
+                            <option value="">Selecione uma opção</option>
+                            <option value="carro">Carro</option>
+                            <option value="moto">Moto</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="marca">Marca</label>
+                        <input type="text" name="marca" id="marca" class="form-control" placeholder="Digite a marca">
+                    </div>
+                    <div class="col-6">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" name="modelo" id="modelo" class="form-control" placeholder="Digite o modelo">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="ano">Ano</label>
+                        <input type="number" name="ano" id="ano" class="form-control" placeholder="Digite o ano">
+                    </div>
+                    <div class="col-6">
+                        <label for="cor">Cor</label>
+                        <input type="text" name="cor" id="cor" class="form-control" placeholder="Digite a cor">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="seguro">Seguro</label>
+                        <select name="seguro" id="seguro" class="form-control">
+                            <option value="">Selecione uma opção</option>
+                            <option value="Possuo Seguro">Possuo Seguro</option>
+                            <option value="Não Possuo Seguro">Não Possuo Seguro</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label for="validade-seguro">Validade Seguro</label>
+                        <select name="validade-seguro" id="validade-seguro" class="form-control">
+                            <option value="">Selecione uma opção</option>
+                            <option value="1 ano">1 ano</option>
+                            <option value="2 anos">2 anos</option>
+                            <option value="Acima de 2 anos">Acima de 2 anos</option>
+                        </select>
+                    </div>
+                </div>
+                <br><br>
+                <button type="button" onclick="submitForm()">Cadastrar</button>
+            </form>
+            <br><br>
+        </div>
+        <img class="rounded" src="static/car-image.png" alt="">
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-text">
+            <p>Siga a AutoControl nas redes sociais</p>
+        </div>
+        <div class="logos" id="text-login">
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram-square"></i></a>
+            &nbsp;&nbsp;
+            <a href="https://pt-br.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        <div class="footer-text">
+            <a href="about_us.html">About us</a>
+        </div>
+    </div>
+    <!-- End Footer -->
+    <script>
+        function submitForm(){
+            Swal.fire(
+            'Muito bom!',
+            'Veículo Cadastrado com Sucesso!',
+            'success'
+            )
+        }
+    </script>
+</body>
+</html>
