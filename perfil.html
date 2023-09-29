@@ -16,7 +16,7 @@ body {
 
 .container{
     display: flex;
-    justify-content:space-around;
+    justify-content:space-evenly;
 }
 
 #text-login {
@@ -58,9 +58,8 @@ color: orange;
 }
 
 .rounded{
-    width: 50%;
-    height: 15%;
-    margin-top: 7%;
+    width: 25%;
+    height: 25%;
 }
 
 form {
@@ -76,6 +75,13 @@ form {
 
 #see-vehicles{
     color: #12111f;
+}
+h2 {
+    font-weight: 700;
+}
+
+.register-perfil {
+    width: 60%;
 }
 
 </style>
@@ -96,77 +102,51 @@ form {
             <p><a href="login.html">Login |</a><a href="register.html"> Cadastro</a></p>
         </div>
     </div>
-    <div style="display: flex; justify-content: end; width: 92%;">
-        <div class="buttons">
-            <a href="all_vehicles.html" id="see-vehicles">Meus Veículos <i class="fas fa-eye" style="color: #12111f;"></i></a>
-        </div>
-    </div>
-
+    <h2 style="margin-left: 200px;">Perfil</h2>
     <div class="container">
-
-        <div class="register-vehicle">
+        <img class="rounded" src="static/perfil.png" alt="">
+        <div class="register-perfil">
             <br>
             <form action="" method="post">
-                <h2 style="font-weight: 700;" >Cadastrar Novo Veículo</h2>
                 <br>
                 <div class="row">
                     <div class="col-6">
-                        <label for="type">Tipo de Veículo</label>
-                        <select name="type" id="type" class="form-control">
-                            <option value="">Selecione uma opção</option>
-                            <option value="carro">Carro</option>
-                            <option value="moto">Moto</option>
-                        </select>
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" placeholder="Dóris Teck" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <label for="type">CPF</label>
+                        <input type="text" placeholder="290.980.765-12" class="form-control">
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-6">
-                        <label for="marca">Marca</label>
-                        <input type="text" name="marca" id="marca" class="form-control" placeholder="Digite a marca">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" placeholder="email@email.com" class="form-control">
                     </div>
                     <div class="col-6">
-                        <label for="modelo">Modelo</label>
-                        <input type="text" name="modelo" id="modelo" class="form-control" placeholder="Digite o modelo">
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-6">
-                        <label for="ano">Ano</label>
-                        <input type="number" name="ano" id="ano" class="form-control" placeholder="Digite o ano">
-                    </div>
-                    <div class="col-6">
-                        <label for="cor">Cor</label>
-                        <input type="text" name="cor" id="cor" class="form-control" placeholder="Digite a cor">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" placeholder="(85) 98765-1234" class="form-control">
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-6">
-                        <label for="seguro">Seguro</label>
-                        <select name="seguro" id="seguro" class="form-control">
-                            <option value="">Selecione uma opção</option>
-                            <option value="Possuo Seguro">Possuo Seguro</option>
-                            <option value="Não Possuo Seguro">Não Possuo Seguro</option>
-                        </select>
+                        <label for="senha">Senha</label>
+                        <input type="text" name="senha" id="senha" class="form-control" placeholder="********">
                     </div>
                     <div class="col-6">
-                        <label for="validade-seguro">Validade Seguro</label>
-                        <select name="validade-seguro" id="validade-seguro" class="form-control">
-                            <option value="">Selecione uma opção</option>
-                            <option value="1 ano">1 ano</option>
-                            <option value="2 anos">2 anos</option>
-                            <option value="Acima de 2 anos">Acima de 2 anos</option>
-                        </select>
+                        <label for="niver">Aniversário</label>
+                        <input type="date" name="niver" id="niver" class="form-control">
                     </div>
                 </div>
                 <br><br>
-                <button type="button" onclick="submitForm()">Cadastrar</button>
+                <button type="button" onclick="submitForm()">Alterar Dados</button>
             </form>
             <br><br>
         </div>
-        <img class="rounded" src="static/car-image.png" alt="">
+        
     </div>
     <!-- Footer -->
     <div class="footer">
@@ -186,8 +166,8 @@ form {
     <script>
         function submitForm(){
             Swal.fire(
-            'Muito bom!',
-            'Veículo Cadastrado com Sucesso!',
+            'Ótimo!',
+            'Perfil Atualizado com Sucesso!',
             'success'
             )
         }

@@ -17,9 +17,7 @@ body {
 .container{
     width: 60%;
     display: flex;
-    justify-content: center;
-    margin-top: 5%;
-
+    justify-content:space-between;
 }
 
 #text-login {
@@ -38,7 +36,7 @@ button {
 .options {
     color: orange;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 i {
@@ -60,63 +58,87 @@ text-decoration:none;
 color: orange;
 }
 
+.rounded{
+    width: 500px;
+    height: 500px;
+}
+
+form {
+    width: 100%;
+}
+
+.buttons{
+    border: solid orange;
+    padding: 5px; 
+    border-radius: 5px;
+    background-color: #ffa500;
+}
+
+h2 {
+    font-weight: 700;
+}
+
 </style>
 <body>
 
     <!-- Header -->
     <nav class="navbar" style="background-color: #12111f;">
         <div class="container-fluid">
-        <a class="navbar-brand" href="base.html"><b>AutoControl</b></a>
-        <form class="d-flex">
-            <a href="login.html" class="d-flex"><i class="fas fa-user-alt"></i></a>
-        </form>
-    </div>
+            <a class="navbar-brand" href="base.html"><b>AutoControl</b></a>
+            <a href="login.html" class="d-flex"><i class="fas fa-user-alt" style="color: orange;"></i></a>
+        </div>
     </nav>
     <!-- End Header -->
-    <br>
-    <div class="container-fluid">
-        <div class="options">
-            <a rel="stylesheet" href="base.html">Voltar</a>
-            <p><a href="login.html">Login |</a><a href="register.html"> Cadastro</a></p>
-        </div>
-    </div>
-
+    <br><br><br>
     <div class="container">
-        <div class="login">
-            <h2 id="text-login">Esqueceu a senha?</h2>
-            <p id="text-login">Redefina a senha em duas etapas.</p>
+
+        <div class="register-vehicle" style="margin-top: 50px;">
             <br>
-            <form action="" method="post">
+            <div>
+                <h2 style="font-weight: 700;">Configurações</h2>
+                <br><br>
                 <div class="row">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="hello@reallygreatsite.com">
+                    <a href="perfil.html"><button class="form-control">Dados Cadastrados</button></a>
                 </div>
                 <br>
-                <button type="button" onclick="submitForm()">Enviar</button>
-            </form>
-            <br><br>
-            <!-- Footer -->
-            <div class="footer">
-                <div class="footer-text">
-                    <p>Siga a AutoControl nas redes sociais</p>
+                <div class="row">
+                    <a href="perfil.html"><button class="form-control">Alterar Senha</button></a>
                 </div>
-                <div class="logos" id="text-login">
-                    <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram-square"></i></a>
-                    &nbsp;&nbsp;
-                    <a href="https://pt-br.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook-square"></i></a>
+                <br>
+                <div class="row">
+                    <a href="perfil.html"><button class="form-control">Excluir Senha</button></a>
                 </div>
-                <div class="footer-text">
-                    <a href="about_us.html">About us</a>
+                <br>
+                <div class="row">
+                    <a href="politica_privacidade.html"><button class="form-control">Politica de Privacidade</button></a>
                 </div>
+                <br><br>
             </div>
-            <!-- End Footer -->
+            <br><br>
+        </div>
+        <img class="rounded" src="static/config.png" alt="">
+    </div>
+    <br><br>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-text">
+            <p>Siga a AutoControl nas redes sociais</p>
+        </div>
+        <div class="logos" id="text-login">
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram-square"></i></a>
+            &nbsp;&nbsp;
+            <a href="https://pt-br.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        <div class="footer-text">
+            <a href="about_us.html">About us</a>
         </div>
     </div>
+    <!-- End Footer -->
     <script>
         function submitForm(){
             Swal.fire(
             'Muito bom!',
-            'Você receberá um e-mail para recuperar sua senha!',
+            'Veículo Cadastrado com Sucesso!',
             'success'
             )
         }

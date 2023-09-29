@@ -10,6 +10,10 @@
 </head>
 <style>
 
+.container{
+    width: 70%;
+}
+
 #image-auto-control {
     width: 100%;
     height: 40%;
@@ -17,7 +21,7 @@
 
 .card{
     width: 10rem;
-    height: 15.4rem;
+    height: 14.1rem;
 }
 
 i {
@@ -46,10 +50,23 @@ i {
 a {
     text-decoration:none;
     color: orange;
-    display: flex;
-    justify-content: center;
 }
-h2 {
+
+.center-page{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.team-image {
+    width: 20%;
+    height: 3%;
+    margin-left: 30px;
+}
+
+p {
+    text-align: justify;
+}
+h3 {
     font-weight: 700;
 }
 
@@ -58,14 +75,14 @@ h2 {
     <!-- Header -->
     <nav class="navbar" style="background-color: #12111f;">
         <div class="container-fluid">
-        <a class="navbar-brand"><b>AutoControl</b></a>
+        <a class="navbar-brand" href="base.html"><b>AutoControl</b></a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
                 <a rel="stylesheet" href="login.html">Login</a>
             </li>
         </ul>
         <form class="d-flex">
-        <i class="fas fa-user-alt" style="color: orange;"></i> &nbsp;
+        <a href="login.html" class="d-flex"><i class="fas fa-user-alt" style="color: orange;"></i></a> &nbsp;
         <small style="color: white;">Dóris Reck</small>
         </form>
     </div>
@@ -75,50 +92,47 @@ h2 {
     <!-- Image Principal AutoControl -->
     <img id="image-auto-control" src="static/logo_auto.jpeg" alt="">
     <!--  End Image Principal AutoControl -->
-    <br><br>
+    <br><br><br>
     <div class="container">
-        <!-- Cards página principal -->
-        <div class="group_cards" style="display: flex; justify-content: space-evenly;">
-            <div class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img h src="static/logo-carro.jpeg" alt="">
-                    <a href="meus_veiculos.html">Ver Mais</a>
-                </div>
-
-            </div>
-            <div class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-gastos.jpeg" alt="">
-                    <a href="#">Ver Mais</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-calendar.jpeg" alt="">
-                    <a href="agendamentos.html">Ver Mais</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-perfil.jpeg" alt="">
-                    <a href="perfil.html">Ver Mais</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-settings.jpeg" alt="">
-                    <a href="configuracoes.html">Ver Mais</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-talk.jpeg" alt="">
-                    <a href="fale_conosco.html">Ver Mais</a>
-                </div>
-            </div>
+        
+        <h3>Meus Agendamentos</h3>
+        <br>
+        <div class="center-page">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Placa</th>
+                    <th scope="col">Data/Hora</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Observação</th>
+                    <th scope="col">Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ABC-1234</td>
+                        <td>26/09/2023 8:00</td>
+                        <td>REVISÃO</td>
+                        <td>Av. Santos Dumont, 6575</td>
+                        <td><a href="editar_agendamento.html"><i class="fas fa-edit"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>DEF-5678</td>
+                        <td>21/10/2023 13:00</td>
+                        <td>PAGAMENTO</td>
+                        <td>Seguro - R$ 900</td>
+                        <td><a href="editar_agendamento.html"><i class="fas fa-edit"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
         </div>
-        <!-- Ends Cards página principal -->
-
+        <br>
+        <div style="display: flex; justify-content: end;">
+            <small>Adicionar Agendamento</small>&nbsp;&nbsp;
+            <a href="novo_agendamento.html"><i class="fas fa-plus-circle"></i></a>
+        </div>
+        <br><br>
         <!-- Footer -->
         <div class="footer">
             <div class="footer-text">

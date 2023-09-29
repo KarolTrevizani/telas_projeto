@@ -15,9 +15,9 @@ body {
 }
 
 .container{
-    width: 60%;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     margin-top: 5%;
 
 }
@@ -60,9 +60,22 @@ text-decoration:none;
 color: orange;
 }
 
+textarea {
+    border: solid #ced4da;
+    border-radius: 10px;
+}
+.rounded{
+    width: 40%;
+    height: 650px;
+}
+
+.login {
+    width: 50%;
+}
 h2 {
     font-weight: 700;
 }
+
 </style>
 <body>
 
@@ -71,7 +84,8 @@ h2 {
         <div class="container-fluid">
         <a class="navbar-brand" href="base.html"><b>AutoControl</b></a>
         <form class="d-flex">
-        <a href="login.html" class="d-flex"><i class="fas fa-user-alt" style="color: orange;"></i></a> &nbsp;
+        <i class="fas fa-user-alt"></i> &nbsp;
+        <small style="color: white;"></small>
         </form>
     </div>
     </nav>
@@ -80,37 +94,50 @@ h2 {
     <div class="container-fluid">
         <div class="options">
             <a rel="stylesheet" href="base.html">Voltar</a>
-            <p><a href="login.html">Login |</a><a href="register.html"> Cadastro</a></p>
         </div>
     </div>
 
     <div class="container">
+
         <div class="login">
-            <h2 id="text-login">Cadastro</h2>
-            <p id="text-login">Já possui cadastro? &nbsp; <a href="login.html">Login</a></p>
-            <br>
+            <h2 >Editar Agendamento</h2>
+            <small style="margin-top: 0%;">Crie um alerta para o seu veículo</small>
+            <br><br>
             <form action="" method="post">
                 <div class="row">
-                    <label for="name">Nome</label>
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Digite o seu nome">
+                    <div class="col-4">
+                        <label for="date">Data/Hora</label>
+                        <input type="datetime-local" name="date" id="date" class="form-control">
+                    </div>
                 </div>
                 <br>
                 <div class="row">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Digite o seu e-mail">
+                    <div class="col-sm">
+                        <label for="vehicle">Veículo</label>
+                        <select name="vehicle" id="vehicle" class="form-control">
+                            <option value="">-------</option>
+                            <option value="Hilux">Hilux</option>
+                            <option value="Corolla">Corolla</option>
+                            <option value="Onix">Onix</option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        <label for="type">Tipo de Agendamento</label>
+                        <select name="type" id="type" class="form-control">
+                            <option value="">-------</option>
+                            <option value="Revisão">Revisão</option>
+                            <option value="Avaria">Avaria</option>
+                        </select>
+                    </div>
                 </div>
                 <br>
-                <div class="row">
-                    <label for="password">Senha</label>
-                    <input type="text" name="password" id="password" class="form-control" placeholder="Digite a sua senha">
-                </div>
                 <br>
                 <div class="row">
-                    <label for="confirm-password">Confirme a sua Senha</label>
-                    <input type="text" name="confirm-password" id="confirm-password" class="form-control" placeholder="Repita a sua senha">
+                    <label for="message">Mensagem</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
                 </div>
                 <br><br>
-                <button type="button" onclick="submitForm()">Cadastrar</button>
+                <button type="button" id="login-button" onclick="submitForm()">Enviar</button>
             </form>
             <br><br>
             <!-- Footer -->
@@ -129,12 +156,13 @@ h2 {
             </div>
             <!-- End Footer -->
         </div>
+        <img class="rounded" src="static/calendar.png" alt="">
     </div>
     <script>
         function submitForm(){
             Swal.fire(
-            'Muito bom!',
-            'Usuário cadastrado com sucesso, pode seguir para o login!',
+            'Recebido!',
+            'Agendamento Editado com Sucesso!',
             'success'
             )
         }

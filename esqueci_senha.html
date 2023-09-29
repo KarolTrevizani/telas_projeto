@@ -59,7 +59,6 @@ a {
 text-decoration:none;
 color: orange;
 }
-
 h2 {
     font-weight: 700;
 }
@@ -71,7 +70,7 @@ h2 {
         <div class="container-fluid">
         <a class="navbar-brand" href="base.html"><b>AutoControl</b></a>
         <form class="d-flex">
-        <a href="login.html" class="d-flex"><i class="fas fa-user-alt" style="color: orange;"></i></a> &nbsp;
+            <a href="login.html" class="d-flex"><i class="fas fa-user-alt"></i></a>
         </form>
     </div>
     </nav>
@@ -86,31 +85,16 @@ h2 {
 
     <div class="container">
         <div class="login">
-            <h2 id="text-login">Cadastro</h2>
-            <p id="text-login">Já possui cadastro? &nbsp; <a href="login.html">Login</a></p>
+            <h2 id="text-login">Esqueceu a senha?</h2>
+            <p id="text-login">Redefina a senha em duas etapas.</p>
             <br>
             <form action="" method="post">
                 <div class="row">
-                    <label for="name">Nome</label>
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Digite o seu nome">
-                </div>
-                <br>
-                <div class="row">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Digite o seu e-mail">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="hello@reallygreatsite.com">
                 </div>
                 <br>
-                <div class="row">
-                    <label for="password">Senha</label>
-                    <input type="text" name="password" id="password" class="form-control" placeholder="Digite a sua senha">
-                </div>
-                <br>
-                <div class="row">
-                    <label for="confirm-password">Confirme a sua Senha</label>
-                    <input type="text" name="confirm-password" id="confirm-password" class="form-control" placeholder="Repita a sua senha">
-                </div>
-                <br><br>
-                <button type="button" onclick="submitForm()">Cadastrar</button>
+                <button type="button" onclick="submitForm()">Enviar</button>
             </form>
             <br><br>
             <!-- Footer -->
@@ -134,7 +118,7 @@ h2 {
         function submitForm(){
             Swal.fire(
             'Muito bom!',
-            'Usuário cadastrado com sucesso, pode seguir para o login!',
+            'Você receberá um e-mail para recuperar sua senha!',
             'success'
             )
         }
