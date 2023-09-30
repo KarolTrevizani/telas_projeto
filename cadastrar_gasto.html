@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoControl</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<style>
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    margin-top: 5%;
+
+}
+
+#text-login {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 70%;
+    margin-left: 15%;
+    background-color: #12111f;
+    color: white;
+    height: 40px;
+}
+
+.options {
+    color: orange;
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    color: gray;
+}
+
+.footer{
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+}
+
+a {
+text-decoration:none;
+color: orange;
+}
+
+textarea {
+    border: solid #ced4da;
+    border-radius: 10px;
+}
+.rounded{
+    width: 40%;
+    height: 650px;
+}
+
+.login {
+    width: 50%;
+}
+h2 {
+    font-weight: 700;
+}
+
+</style>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar" style="background-color: #12111f;">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="base.html"><b>AutoControl</b></a>
+        <form class="d-flex">
+        <i class="fas fa-user-alt"></i> &nbsp;
+        <small style="color: white;"></small>
+        </form>
+    </div>
+    </nav>
+    <!-- End Header -->
+    <br>
+    <div class="container-fluid">
+        <div class="options">
+            <a rel="stylesheet" href="agendamentos.html">Voltar</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="login">
+            <h2 >Cadastrar Novo Gasto</h2>
+            <br><br>
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="date">Data</label>
+                        <input type="date" name="date" id="date" class="form-control">
+                    </div>
+                    <div class="col-sm">
+                        <label for="vehicle">Valor</label>
+                        <input type="text" placeholder="R$ 0.00" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="type">Tipo de Gasto</label>
+                        <select name="type" id="type" class="form-control">
+                            <option value="">-------</option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        <label for="vehicle">Veículo</label>
+                        <select name="vehicle" id="vehicle" class="form-control">
+                            <option value="">-------</option>
+                            <option value="Hilux">Hilux</option>
+                            <option value="Corolla">Corolla</option>
+                            <option value="Onix">Onix</option>
+                        </select>
+                    </div>
+                </div>
+                <br><br>
+                <button type="button" id="login-button" onclick="submitForm()">Registrar</button>
+            </form>
+            <br><br>
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-text">
+                    <p>Siga a AutoControl nas redes sociais</p>
+                </div>
+                <div class="logos" id="text-login">
+                    <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram-square"></i></a>
+                    &nbsp;&nbsp;
+                    <a href="https://pt-br.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook-square"></i></a>
+                </div>
+                <div class="footer-text">
+                    <a href="about_us.html">About us</a>
+                </div>
+            </div>
+            <!-- End Footer -->
+        </div>
+        <img class="rounded" src="static/imagem_gastos.png" alt="">
+    </div>
+    <script>
+        function submitForm(){
+            Swal.fire(
+            'Muito bom !',
+            'Gasto registrado com sucesso!',
+            'success'
+            )
+        }
+    </script>
+</body>
+</html>

@@ -10,6 +10,10 @@
 </head>
 <style>
 
+.container{
+    width: 70%;
+}
+
 #image-auto-control {
     width: 80%;
     height: 20%;
@@ -17,7 +21,7 @@
 
 .card{
     width: 10rem;
-    height: 13.6rem;
+    height: 14.1rem;
 }
 
 i {
@@ -46,26 +50,41 @@ i {
 a {
     text-decoration:none;
     color: orange;
+}
+
+.center-page{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.team-image {
+    width: 20%;
+    height: 3%;
+    margin-left: 30px;
+}
+
+p {
+    text-align: justify;
 }
 h2 {
     font-weight: 700;
 }
-
+small {
+    color: orange;
+}
 </style>
 <body>
     <!-- Header -->
     <nav class="navbar" style="background-color: #12111f;">
         <div class="container-fluid">
-        <a class="navbar-brand"><b>AutoControl</b></a>
+        <a class="navbar-brand" href="base.html"><b>AutoControl</b></a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
                 <a rel="stylesheet" href="login.html">Login</a>
             </li>
         </ul>
         <form class="d-flex">
-        <i class="fas fa-user-alt" style="color: orange;"></i> &nbsp;
+        <a href="login.html" class="d-flex"><i class="fas fa-user-alt" style="color: orange;"></i></a> &nbsp;
         <small style="color: white;">Dóris Reck</small>
         </form>
     </div>
@@ -74,45 +93,57 @@ h2 {
 
     <!-- Image Principal AutoControl -->
     <div style="background-color: #12111f;">
-    <img id="image-auto-control" src="static/logo_auto.jpeg" alt="">
+        <img id="image-auto-control" src="static/logo_auto.jpeg" alt="">
     </div>
     <!--  End Image Principal AutoControl -->
+    <br><br><br>
     <div class="container">
-        <!-- Cards página principal -->
-        <div class="group_cards" style="display: flex; justify-content: space-evenly;">
-            <a href="meus_veiculos.html" class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img h src="static/logo-carro.jpeg" alt="">
-                </div>
-            </a>
-            <a href="meus_gastos.html" class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-gastos.jpeg" alt="">
-                </div>
-            </a>
-            <a href="agendamentos.html" class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-calendar.jpeg" alt="">
-                </div>
-            </a>
-            <a href="perfil.html" class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-perfil.jpeg" alt="">
-                </div>
-            </a>
-            <a href="configuracoes.html" class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-settings.jpeg" alt="">
-                </div>
-            </a>
-            <a href="fale_conosco.html" class="card">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <img src="static/logo-talk.jpeg" alt="">
-                </div>
-            </a>
+        
+        <h2>Meus Gastos</h2>
+        <br>
+        <div class="center-page">
+            <table class="table">
+                <thead style="background-color: #f3f4f8;">
+                    <tr>
+                    <th scope="col">Placa</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ABC-1234</td>
+                        <td><i class="fas fa-dollar-sign"></i> 150,00</td>
+                        <td>25/09/2023</td>
+                        <td>Abastecimento</td>
+                        <td><a href="editar_gasto.html"><i class="fas fa-edit"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>DEF-5678</td>
+                        <td><i class="fas fa-dollar-sign"></i> 1.467,00</td>
+                        <td>12/07/2023</td>
+                        <td>Tributos</td>
+                        <td><a href="editar_gasto.html"><i class="fas fa-edit"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>DEF-5678</td>
+                        <td><i class="fas fa-dollar-sign"></i> 383,60</td>
+                        <td>30/06/2023</td>
+                        <td>Seguro</td>
+                        <td><a href="editar_gasto.html"><i class="fas fa-edit"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
         </div>
-        <!-- Ends Cards página principal -->
-
+        <br>
+        <div style="display: flex; justify-content: end;">
+            <small>Adicionar Gasto</small>&nbsp;&nbsp;
+            <a href="cadastrar_gasto.html"><i class="fas fa-plus-circle" style="color: orange;"></i></a>
+        </div>
+        <br><br>
         <!-- Footer -->
         <div class="footer">
             <div class="footer-text">
